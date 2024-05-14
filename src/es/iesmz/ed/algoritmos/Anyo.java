@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Esta clase crea objetos capaces de identificar el número distinto de dígitos en un año
  * @author Sopacasera
- * @version 1.0 14/05/2024
+ * @version 1.1 14/05/2024
  */
 
 public class Anyo {
@@ -27,7 +27,7 @@ public class Anyo {
      * @return el número de dígitos diferentes
      */
     public int digitosDiferentes(){
-        String anyoStr = Long.toString(anyo);
+        String anyoStr = Long.toString(Math.abs(anyo));
         List<Character> digitosUnicos = new ArrayList<>();
 
         for (int i = 0; i < anyoStr.length(); i++) {
