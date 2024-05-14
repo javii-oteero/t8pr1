@@ -1,5 +1,7 @@
 package es.iesmz.ed.algoritmos;
 
+import com.sun.security.jgss.GSSUtil;
+
 /**
  * Esta clase define objetos que definen si un número es hiperpar
  * @author: Sopacasera
@@ -14,6 +16,11 @@ public class Hyperpar {
      * @return true si es hiperpar, false si no lo es
      */
     public static boolean isHyperpar(long num){
+        String s = String.valueOf(num);
+        for (int i = 0; i < s.length(); i++){
+            int individualNum = Integer.parseInt(String.valueOf(s.charAt(i)));
+            if (individualNum % 2 != 0) return false;
+        }
         return true;
     }
 }

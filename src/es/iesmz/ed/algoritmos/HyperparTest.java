@@ -26,6 +26,6 @@ class HyperparTest {
 
     @Test
     void testNoHiperparNegativo(){
-        assertFalse(Hyperpar.isHyperpar(1256));
+        assertFalse(Hyperpar.isHyperpar(-1256));
     }
 }
