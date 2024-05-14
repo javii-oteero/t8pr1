@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Esta clase crea objetos capaces de identificar el número distinto de dígitos en un año
+ * Esta clase crea objetos capaces de identificar el numero distinto de digitos en un anyo
  * @author Sopacasera
  * @version 1.1 14/05/2024
  */
@@ -16,15 +16,15 @@ public class Anyo {
 
     /**
      * Constructor para la clase
-     * @param anyo el año a comprobar los dígitos distintos
+     * @param anyo el anyo a comprobar los digitos distintos
      */
     public Anyo(long anyo){
         this.anyo = anyo;
     }
 
     /**
-     * Método para calcular el número de dígitos diferentes en el año
-     * @return el número de dígitos diferentes
+     * Metodo para calcular el numero de digitos diferentes en el anyo
+     * @return el numero de digitos diferentes
      */
     public int digitosDiferentes(){
         String anyoStr = Long.toString(Math.abs(anyo));
