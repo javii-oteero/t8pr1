@@ -1,50 +1,50 @@
 package es.iesmz.ed.algoritmos;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class DividirFactorialTest {
 
     @Test
-    public void testDivisionNumeradorYDenominadorPositivos() {
-        DividirFactorial prueba = new DividirFactorial(5, 3);
-        assertEquals(20.0, prueba.division(), 0.0001);
+    public void testDivisionWhenNumeradorEqualsDenominador() {
+        DividirFactorial df = new DividirFactorial(5, 5);
+        assertEquals(1, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorPositivoYDenominadorNegativo() {
-        DividirFactorial prueba = new DividirFactorial(6, -3);
-        assertEquals(6.0, prueba.division(), 0.0001);
+    public void testDivisionWhenNumeradorGreaterThanDenominador() {
+        DividirFactorial df = new DividirFactorial(5, 3);
+        assertEquals(20, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorNegativoYDenominadorPositivo() {
-        DividirFactorial prueba = new DividirFactorial(-4, 7);
-        assertEquals(1.0, prueba.division(), 0.0001);
+    public void testDivisionWhenDenominadorGreaterThanNumerador() {
+        DividirFactorial df = new DividirFactorial(3, 5);
+        assertEquals(0.05, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorYDenominadorNegativos() {
-        DividirFactorial prueba = new DividirFactorial(-2, -5);
-        assertEquals(2.0, prueba.division(), 0.0001);
+    public void testDivisionWhenBothAreZero() {
+        DividirFactorial df = new DividirFactorial(0, 0);
+        assertEquals(1, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorCeroYDenominadorPositivo() {
-        DividirFactorial prueba = new DividirFactorial(0, 3);
-        assertEquals(1.0, prueba.division(), 0.0001);
+    public void testDivisionWhenNumeradorIsZero() {
+        DividirFactorial df = new DividirFactorial(0, 5);
+        assertEquals(0.0083, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorPositivoYDenominadorCero() {
-        DividirFactorial prueba = new DividirFactorial(4, 0);
-        assertEquals(Double.POSITIVE_INFINITY, prueba.division(), 0.0001);
+    public void testDivisionWhenBothAreNegative() {
+        DividirFactorial df = new DividirFactorial(-5, -3);
+        assertEquals(0, df.division(), 0.001);
     }
 
     @Test
-    public void testDivisionNumeradorYDenominadorCero() {
-        DividirFactorial prueba = new DividirFactorial(0, 0);
-        assertEquals(Double.NaN, prueba.division(), 0.0001);
+    public void testDivisionWhenOneIsNegative() {
+        DividirFactorial df = new DividirFactorial(5, -3);
+        assertEquals(0, df.division(), 0.001);
     }
 }

@@ -27,7 +27,20 @@ public class DividirFactorial {
      * @return El resultado de la división de los factoriales
      */
     public double division(){
-        return 0;
+        if (numerador == denominador) return 1;
+        if (numerador < 0 || denominador < 0) return 0;
+        int result = 1;
+        if (numerador > denominador){
+            for (int i = denominador + 1; i <= numerador; i++) {
+                result *= i;
+            }
+            return result;
+        } else {
+            for (int i = numerador + 1; i <= denominador; i++) {
+                result *= i;
+            }
+            return (double) 1/result;
+        }
     }
 
 }
