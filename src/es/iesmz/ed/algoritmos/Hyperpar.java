@@ -3,16 +3,16 @@ package es.iesmz.ed.algoritmos;
 import com.sun.security.jgss.GSSUtil;
 
 /**
- * Esta clase define objetos que definen si un número es hiperpar
- * @author: Sopacasera
- * @version: 1.1 14/05/2024
+ * Esta clase define objetos que definen si un numero es hiperpar
+ * @author Sopacasera
+ * @version 1.1 14/05/2024
  *
  */
 public class Hyperpar {
 
     /**
-     * Método para saber si un número es hiperpar
-     * @param num el número del que se quiere saber si es hiperpar
+     * Metodo para saber si un numero es hiperpar
+     * @param num el numero del que se quiere saber si es hiperpar
      * @return true si es hiperpar, false si no lo es
      */
     public static boolean isHyperpar(long num){
